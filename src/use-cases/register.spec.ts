@@ -35,7 +35,7 @@ describe('Register Use Case', () => {
       user.password_hash
     )
 
-    exp
+   
   })
 
   it('should not be able to register with same email twice', async () => {
