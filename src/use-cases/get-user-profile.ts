@@ -9,7 +9,7 @@ interface GetUserProfileRequest {
 }
 
 
-interface GetUserPRofileUseCaseResponse {
+interface GetUserProfileUseCaseResponse {
   user: User
 }
 
@@ -21,7 +21,7 @@ export class GetUserProfileUseCase {
 
   async execute ({
     userId
-  }: GetUserProfileRequest): Promise<GetUserPRofileUseCaseResponse> {
+  }: GetUserProfileRequest): Promise<GetUserProfileUseCaseResponse> {
     const user = await this.usersRepository.findById(userId)
 
     if (!user) {
