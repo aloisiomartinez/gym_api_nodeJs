@@ -64,5 +64,6 @@ describe('Validate Check-in Use Case', () => {
       }),
     ).rejects.toBeInstanceOf(Error)
 
-  })
+})
+
 })

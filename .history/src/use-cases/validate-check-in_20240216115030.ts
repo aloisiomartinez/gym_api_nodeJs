@@ -6,7 +6,6 @@ import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coor
 import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins-error";
 import { MaxDistanceError } from "./errors/max-distance-error";
 import dayjs from "dayjs";
-import { LateCheckInValidationError } from "./errors/late-check-in-validation-error";
 
 interface ValidateValidateCheckInUseCaseRequest {
  checkInId: string
@@ -38,7 +37,7 @@ export class ValidateCheckInUseCase {
     )
 
     if (distanceInMinutesFromCheckInCreation > 20) {
-      throw new LateCheckInValidationError()
+      throw new Error()
     }
 
     checkIn.validated_at = new Date()

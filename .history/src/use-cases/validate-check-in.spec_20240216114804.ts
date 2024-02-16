@@ -58,11 +58,8 @@ describe('Validate Check-in Use Case', () => {
 
     vi.advanceTimersByTime(twentyOneMinutesInMs)
 
-    await expect(() => 
-      sut.execute({
-        checkInId: createdCheckIn.id,
-      }),
-    ).rejects.toBeInstanceOf(Error)
+    await expect(() => sut.execute({
+      checkInId: createdCheckIn.id,
+    })).rejects.toBeInstanceOf(Error)
 
-  })
 })
